@@ -4,14 +4,14 @@ services:
     env_file:
       - .env
     ports:
-      - "8001:8000"
+      - "8002:8000"
     command: >
       sh -c "
       python manage.py migrate --noinput &&
       python manage.py collectstatic --noinput &&
       gunicorn restuarant.wsgi:application
       --bind 0.0.0.0:8000
-      --workers 3
+      --workers 2
       --timeout 120
       "
     volumes:
