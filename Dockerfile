@@ -13,6 +13,3 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/
-
-# Optional: make sure static folder exists
-RUN mkdir -p /app/staticfiles
