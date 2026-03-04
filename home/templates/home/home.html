@@ -1,0 +1,374 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H2W Restaurant</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-glass py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="#">
+        <!-- Optional logo -->
+        <!-- <img src="{% static 'home/img/logo.png' %}" alt="H2W" height="28"> -->
+        <span class="brand-mark">H2W</span>
+        <span class="brand-text">Restaurant</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button"
+              data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3 mt-3 mt-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-gold btn-sm px-3" href="#">View Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-gold btn-sm px-3" href="#">Reserve</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (VIDEO) -->
+  <header class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="{% static 'home/video/hero.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="badge-line mb-3">
+            <span class="badge badge-soft">Hot • Fresh • Smoky</span>
+          </div>
+
+          <h1 class="display-title mb-3">H2W Restaurant</h1>
+          <p class="lead text-white-50 mb-4 hero-sub">
+            A refined dining experience with bold flavor — served with signature smoke.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#" class="btn btn-gold px-4 py-2">View Menu</a>
+            <a href="#" class="btn btn-outline-gold px-4 py-2">Reserve a Table</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- subtle bottom fade -->
+    <div class="hero-bottom-fade"></div>
+  </header>
+
+  <!-- SECTION: FEATURES -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="section-kicker mb-2">What makes us special</p>
+        <h2 class="section-title">A dining experience worth repeating</h2>
+      </div>
+
+      <div class="row g-3 g-lg-4">
+        <div class="col-md-4">
+          <div class="feature glass-card h-100">
+            <h5 class="mb-2">Fresh Ingredients</h5>
+            <p class="text-white-50 mb-0">Quality meals made from carefully selected ingredients.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature2 glass-card h-100">
+            <h5 class="mb-2">Warm Ambience</h5>
+            <p class="mb-0">Perfect for dates, family time, and celebrations.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature1 glass-card h-100">
+            <h5 class="mb-2">Signature Smoke</h5>
+            <p class="text-white-50 mb-0">A bold, smoky finish that makes every bite memorable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: SIGNATURE DISHES -->
+  <div class="m-4 row g-3 g-lg-4">
+
+    <!-- Rolex -->
+   <div class="col-md-4">
+      <div class="feature dish-card">
+        <img src="{% static 'home/images/derrick-pare-LdsXdIVqrdw-unsplash.jpg' %}"
+             class="img-fluid dish-img-real"
+             alt="Ugandan Rolex">
+        <div class="p-3">
+          <h6 class="mb-1">Ugandan Rolex</h6>
+          <p class="text-white-50 small mb-0">
+            Fresh chapati rolled with eggs & vegetables — Kampala classic.
+          </p> 
+        </div>
+      </div>
+    </div>
+  
+    <!-- Tilapia -->
+    <div class="col-md-4">
+      <div class="dish-card">
+        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80"
+             class="img-fluid dish-img-real"
+             alt="Grilled Tilapia">
+        <div class="p-3">
+          <h6 class="mb-1">Lake Victoria Tilapia</h6>
+          <p class="text-white-50 small mb-0">
+            Fire-grilled whole tilapia with signature smoky finish.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Luwombo -->
+    <div class="col-md-4">
+      <div class="feature2 dish-card">
+        <img src="{% static 'home/images/chips.jpeg' %}"
+             class="img-fluid dish-img-real"
+             alt="Ugandan Rolex">
+        <div class="p-3">
+          <h6 class="mb-1">Ugandan Rolex</h6>
+          <p class="text-white-50 small mb-0">
+            Fresh chapati rolled with eggs & vegetables — Kampala classic.
+          </p> 
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </section>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <section class="pt-5 section-pad services-section pt-0" id="services">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="section-kicker mb-2">Services</p>
+        <h2 class="section-title">How we serve you</h2>
+        <p class="text-white-50 mb-0 mx-auto" style="max-width:720px;">
+          Whether you’re dining in, ordering for delivery, or planning an event — H2W is built for great food and smooth service.
+        </p>
+      </div>
+  
+      <div class="row g-3 g-lg-4">
+        <!-- Dine In -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card h-100">
+            <div class="service-icon">🍽️</div>
+            <h5 class="mb-2">Dine-In</h5>
+            <p class="text-white-50 mb-0">Enjoy warm ambience, fast service, and fresh meals served hot.</p>
+          </div>
+        </div>
+  
+        <!-- Delivery -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card h-100">
+            <div class="service-icon">🛵</div>
+            <h5 class="mb-2">Delivery</h5>
+            <p class="text-white-50 mb-0">Quick delivery around Kampala — your food arrives fresh and safe.</p>
+          </div>
+        </div>
+  
+        <!-- Takeaway -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card h-100">
+            <div class="service-icon">🥡</div>
+            <h5 class="mb-2">Takeaway</h5>
+            <p class="text-white-50 mb-0">Order ahead and pick up — perfect for busy days and quick lunch.</p>
+          </div>
+        </div>
+  
+        <!-- Catering -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card h-100">
+            <div class="service-icon">🎉</div>
+            <h5 class="mb-2">Catering & Events</h5>
+            <p class="text-white-50 mb-0">From parties to corporate — we deliver taste at scale.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- CTA bar -->
+      <div class="services-cta mt-4">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+          <div>
+            <div class="fw-semibold">Need delivery or catering?</div>
+            <div class="text-white-50 small">Tap to call or WhatsApp and we’ll handle the rest.</div>
+          </div>
+  
+          <div class="d-flex flex-wrap gap-2">
+            <a href="tel:+256700000000" class="btn btn-gold px-4 py-2">Call Now</a>
+            <a href="https://wa.me/256700000000" class="btn btn-outline-gold px-4 py-2">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <section class="section-pad location-section" id="location">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="section-kicker mb-2">Location</p>
+        <h2 class="section-title">Find us & visit today</h2>
+        <p class="text-white-50 mb-0 mx-auto" style="max-width:720px;">
+          We’re open daily. Dine-in, takeaway, and delivery available around Kampala.
+        </p>
+      </div>
+  
+      <div class="row g-4 align-items-stretch">
+        <!-- INFO CARD -->
+        <div class="col-lg-5">
+          <div class="feature location-card h-100">
+            <h5 class="mb-2">H2W Restaurant & Cafe</h5>
+            <p class="text-white-50 mb-4">
+              Kampala, Uganda
+              <br>
+              <span class="small">*(Replace with your exact address)*</span>
+            </p>
+  
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="mini-card">
+                  <div class="mini-title">Opening Hours</div>
+                  <div class="mini-text">Mon – Sun</div>
+                  <div class="mini-text">10:00 AM – 10:00 PM</div>
+                </div>
+              </div>
+  
+              <div class="col-6">
+                <div class="mini-card">
+                  <div class="mini-title">Contact</div>
+                  <div class="mini-text">Phone: +256 7XX XXX XXX</div>
+                  <div class="mini-text">WhatsApp: +256 7XX XXX XXX</div>
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <div class="mini-card">
+                  <div class="mini-title">Delivery</div>
+                  <div class="mini-text">Fast delivery around Kampala</div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <!-- Replace these links with your real ones -->
+              <a class="btn btn-gold px-4 py-2" href="https://www.google.com/maps" target="_blank" rel="noopener">
+                Get Directions
+              </a>
+              <a class="btn btn-outline-gold px-4 py-2" href="tel:+256700000000">
+                Call
+              </a>
+              <a class="btn btn-outline-gold px-4 py-2" href="https://wa.me/256700000000" target="_blank" rel="noopener">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- MAP -->
+        <div class="col-lg-7">
+          <div class="map-card h-100">
+            <!-- Google Map embed: replace src with your restaurant pin -->
+            <iframe
+              title="H2W Restaurant Location"
+              src="https://www.google.com/maps?q=Kampala%20Uganda&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row gy-4">
+  
+        <!-- Brand -->
+        <div class="col-lg-4">
+          <div class="footer-brand mb-3">
+            <span class="brand-mark">H2W</span>
+            <span class="brand-text ms-2">Restaurant</span>
+          </div>
+          <p class="footer-text">
+            A refined dining experience with bold flavors and signature smoke.
+            Dine-in, delivery, and catering available.
+          </p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-4">
+          <h6 class="footer-title">Quick Links</h6>
+          <ul class="footer-links list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Location</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-4">
+          <h6 class="footer-title">Contact</h6>
+          <p class="footer-text mb-1">Kampala, Uganda</p>
+          <p class="footer-text mb-1">+256 7XX XXX XXX</p>
+          <p class="footer-text">Open Daily: 10AM – 10PM</p>
+        </div>
+  
+        <!-- Social -->
+        <div class="col-lg-3 col-md-4">
+          <h6 class="footer-title">Follow Us</h6>
+          <div class="footer-social d-flex gap-3 mt-2">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3">
+        <div class="small text-white-50">
+          © {% now "Y" %} H2W Restaurant. All rights reserved.
+        </div>
+  
+        <div class="small text-white-50 mt-2 mt-md-0">
+          Designed & Developed by <span class="vicotech">Vicotech</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
