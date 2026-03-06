@@ -21,7 +21,7 @@
         <!-- Optional logo -->
         <!-- <img src="{% static 'home/img/logo.png' %}" alt="H2W" height="28"> -->
         <span class="brand-mark">H2W</span>
-        <span class="brand-text">Restaurant</span>
+        <span class="brand-text">Restaurant & Cafe</span>
       </a>
 
       <button class="navbar-toggler border-0 shadow-none" type="button"
@@ -32,9 +32,9 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="nav">
         <ul class="navbar-nav align-items-lg-center gap-lg-3 mt-3 mt-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
 
           <li class="nav-item ms-lg-2">
             <a href="{% url 'menu_pdf_view' %}" target="_blank" class="btn btn-gold">
@@ -119,9 +119,9 @@
              class="img-fluid dish-img-real"
              alt="Ugandan Rolex">
         <div class="p-3">
-          <h6 class="mb-1">Ugandan Rolex</h6>
+          <h6 class="mb-1">Classic Pizza</h6>
           <p class="text-white-50 small mb-0">
-            Fresh chapati rolled with eggs & vegetables — Kampala classic.
+            Freshly baked pizza topped with cheese, vegetables, and savory flavors.
           </p> 
         </div>
       </div>
@@ -144,14 +144,14 @@
   
     <!-- Luwombo -->
     <div class="col-md-4">
-      <div class="feature2 dish-card">
+      <div class="feature1 dish-card">
         <img src="{% static 'home/images/chips.jpeg' %}"
              class="img-fluid dish-img-real"
              alt="Ugandan Rolex">
         <div class="p-3">
-          <h6 class="mb-1">Ugandan Rolex</h6>
+          <h6 class="mb-1">Signature Burger</h6>
           <p class="text-white-50 small mb-0">
-            Fresh chapati rolled with eggs & vegetables — Kampala classic.
+            Juicy beef burger served with crispy golden fries.
           </p> 
         </div>
       </div>
@@ -358,7 +358,7 @@
       <!-- Bottom -->
       <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3">
         <div class="small text-white-50">
-          © {% now "Y" %} H2W Restaurant. All rights reserved.
+          © {% now "Y" %} H2W Restaurant & Cafe. All rights reserved.
         </div>
   
         <div class="small text-white-50 mt-2 mt-md-0">
