@@ -16,15 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-
-]
-
 from django.conf import settings
 from django.conf.urls.static import static
 
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", include("home.urls")),
+    path("", include("menu.urls")),
+]
+
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # ✅ Serve uploaded files (PDFs, images, etc.)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

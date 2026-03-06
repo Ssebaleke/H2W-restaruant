@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ==================================================
 SECRET_KEY = os.getenv("SECRET_KEY", "unsafe-secret-key-change-me")
 
-DEBUG = os.getenv("DEBUG", "False").lower() in ("1", "true", "yes", "y")
+DEBUG = os.getenv("DEBUG", "True").lower() in ("1", "true", "yes", "y")
 
 ALLOWED_HOSTS = [
     h.strip()
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # your app
     "home",
+    "menu"
 ]
 
 
