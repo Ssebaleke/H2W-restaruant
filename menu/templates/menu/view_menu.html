@@ -27,21 +27,25 @@
     </div>
   </nav>
 
-  <section class="py-5 text-center">
+  <section class="py-5">
     <div class="container">
-      <p class="section-kicker mb-2">Our Menu</p>
-      <h1 class="page-title mb-3">Explore Our Dishes</h1>
-      <p class="text-white-50 mb-4">Tap below to view our latest menu instantly.</p>
+      <div class="text-center mb-4">
+        <p class="section-kicker mb-2">Our Menu</p>
+        <h1 class="page-title mb-2">Explore Our Dishes</h1>
+      </div>
 
       {% if menu %}
-        <a class="btn btn-gold px-4 py-2"
-           href="{% url 'menu_pdf_view' %}"
-           target="_blank"
-           rel="noopener">
-          View Menu
-        </a>
+        <iframe
+          src="{% url 'menu_pdf_view' %}"
+          width="100%"
+          style="height:90vh; border:none; border-radius:12px;"
+          title="H2W Restaurant Menu">
+          <p class="text-white-50">Your browser does not support PDFs.
+            <a href="{% url 'menu_pdf_view' %}" class="btn btn-gold">Download Menu</a>
+          </p>
+        </iframe>
       {% else %}
-        <p class="text-white-50">Menu not uploaded yet.</p>
+        <p class="text-white-50 text-center">Menu not uploaded yet.</p>
       {% endif %}
     </div>
   </section>
